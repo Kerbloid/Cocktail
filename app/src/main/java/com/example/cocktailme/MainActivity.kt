@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
             lifecycleScope.launch(Dispatchers.IO) {
                     val respose = RetrofitClient.service.getRandom().execute()
                     if (respose.isSuccessful) {
+
                         Log.d(TAG, "successful")
                         Log.d(TAG, respose.body().toString())
                     } else {
