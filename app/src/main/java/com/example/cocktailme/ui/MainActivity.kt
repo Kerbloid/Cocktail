@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         get.setOnClickListener {
+
             lifecycleScope.launch(Dispatchers.IO) {
                 val drinkList: DrinkList? = viewModel.getRandomCocktail()
                 if (drinkList != null) {
