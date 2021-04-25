@@ -1,4 +1,4 @@
-package com.example.cocktailme
+package com.example.cocktailme.model
 
 
 import com.google.gson.annotations.SerializedName

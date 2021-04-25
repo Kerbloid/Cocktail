@@ -1,5 +1,7 @@
-package com.example.cocktailme
+package com.example.cocktailme.rest
 
+import com.example.cocktailme.API_KEY
+import com.example.cocktailme.BASE_URL
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
