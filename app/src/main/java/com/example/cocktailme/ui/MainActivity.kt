@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                     recyclerView.visibility = View.VISIBLE
                 }
                 Status.LOADING -> {
+
                     progressBar.visibility = View.VISIBLE
                     recyclerView.visibility = View.GONE
                 }
