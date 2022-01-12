@@ -9,7 +9,7 @@ import com.example.cocktailme.inflate
 import com.example.cocktailme.model.Drink
 import kotlinx.android.synthetic.main.item_cocktail.view.*
 
-class CocktailAdapter(private val drinkList: List<Drink>): RecyclerView.Adapter<CocktailAdapter.CocktailHolder>() {
+class CocktailAdapter(private val drinkList: ArrayList<Drink>): RecyclerView.Adapter<CocktailAdapter.CocktailHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -48,5 +48,9 @@ class CocktailAdapter(private val drinkList: List<Drink>): RecyclerView.Adapter<
                 }
             }
         }
+    }
+
+    fun addData(list: List<Drink>) {
+        drinkList.addAll(list)
     }
 }
