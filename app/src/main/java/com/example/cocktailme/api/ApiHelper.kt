@@ -6,4 +6,5 @@ import retrofit2.Response
 
 interface ApiHelper {
     suspend fun getRandomCocktails(): Call<DrinkList>
+    suspend fun getPopularCocktails(): Call<DrinkList>
 }

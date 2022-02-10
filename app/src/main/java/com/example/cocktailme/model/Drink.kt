@@ -2,6 +2,7 @@ package com.example.cocktailme.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Drink(
     @SerializedName("dateModified")
@@ -106,4 +107,4 @@ data class Drink(
     val strTags: String? = null,
     @SerializedName("strVideo")
     val strVideo: String? = null
-)
+): Serializable

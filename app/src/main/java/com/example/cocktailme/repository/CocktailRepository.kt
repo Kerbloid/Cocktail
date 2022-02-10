@@ -16,4 +16,13 @@ class CocktailRepository @Inject constructor(private val apiHelper: ApiHelper) {
         }
     }
 
+    suspend fun getPopularCocktails(): DrinkList {
+        val response = apiHelper.getPopularCocktails().execute()
+        return if (response.isSuccessful) {
+            response.body()!!
+        } else {
+            DrinkList()
+        }
+    }
+
 }
