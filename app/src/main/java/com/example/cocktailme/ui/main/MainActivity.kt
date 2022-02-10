@@ -12,7 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.example.cocktailme.model.Drink
 import com.example.cocktailme.viewmodel.CocktailViewModel
-import com.example.cocktailme.theme.DrinkTheme
+import com.example.cocktailme.theme.CocktailMeTheme
 import com.example.cocktailme.ui.components.CircularIndeterminateProgressBar
 import com.example.cocktailme.ui.drinkInfo.DrinkActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DrinkTheme {
+            CocktailMeTheme {
                 Surface(color = MaterialTheme.colors.background) {
                     Box(
                         modifier = Modifier.fillMaxSize(),

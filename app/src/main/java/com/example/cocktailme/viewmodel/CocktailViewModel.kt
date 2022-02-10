@@ -29,7 +29,7 @@ class CocktailViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             loading.value = true
-//            delay(3000)
+            delay(5000)
             cocktails = fetchCocktails()!!
             loading.value = false
         }

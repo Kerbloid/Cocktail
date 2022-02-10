@@ -6,8 +6,7 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cocktailme.model.Drink
-import com.example.cocktailme.theme.DrinkTheme
-import com.example.cocktailme.ui.DrinkScreen
+import com.example.cocktailme.theme.CocktailMeTheme
 
 class DrinkActivity : AppCompatActivity() {
     private val drink: Drink by lazy {
@@ -17,7 +16,7 @@ class DrinkActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DrinkTheme {
+            CocktailMeTheme {
                 DrinkScreen(drink)
             }
         }
