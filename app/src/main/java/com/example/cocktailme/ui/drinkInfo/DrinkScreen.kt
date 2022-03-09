@@ -2,8 +2,12 @@ package com.example.cocktailme.ui.drinkInfo
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CornerSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.Card
 import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
@@ -41,9 +45,16 @@ private fun ProfileContent(drink: Drink, containerHeight: Dp) {
 
         DrinkName(drink)
 
+        Spacer(modifier = Modifier.height(8.dp))
+        
+        DrinkIngredients(drink = drink)
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        DrinkInstructions(instructions = drink.strInstructions!!)
         // Add a spacer that always shows part (55.dp) of the fields list regardless of the device,
         // in order to always leave some content at the top.
-        Spacer(Modifier.height((containerHeight - 55.dp).coerceAtLeast(0.dp)))
+        Spacer(Modifier.height((containerHeight - 380.dp).coerceAtLeast(0.dp)))
     }
 }
 
