@@ -15,14 +15,14 @@ import com.skydoves.landscapist.glide.GlideImage
 @Composable
 fun DrinkHeaderImage(
     scrollState: ScrollState,
-    drink: Drink,
+    drinkImage: String?,
     containerHeight: Dp
 ) {
     val offset = (scrollState.value / 2)
     val offsetDp = with(LocalDensity.current) { offset.toDp() }
 
     GlideImage(
-        imageModel = drink.strDrinkThumb,
+        imageModel = drinkImage,
         contentScale = ContentScale.Crop,
         modifier = Modifier
             .heightIn(max = containerHeight / 2)
